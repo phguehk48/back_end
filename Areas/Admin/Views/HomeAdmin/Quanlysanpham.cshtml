@@ -7,18 +7,22 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <div class="content-wrapper">
-<div>
-    <h1 class="page-title">
-        <span class="page-title-icon bg-gradient-primary text-white me-2">
-            <i class="mdi mdi-home"></i>
-        </span>
-        Quản lý sản phẩm
-    </h1>
-</div>
 
-<div>
-    <a class="btn btn-success btn-create-product" asp-action="Themsanpham">Thêm sản phẩm</a>
+    <div class="page-header d-flex justify-content-between align-items-center">
+        <!-- Tiêu đề -->
+        <h1 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                <i class="mdi mdi-cart-outline"></i>
+            </span>
+            Quản lý sản phẩm
+        </h1>
+   
+        </div>
 
+        <!-- Nút Thêm sản phẩm -->
+        <div class="action-container">
+            <a class="btn btn-succes btn-add-product" asp-action="Themsanpham">Thêm sản phẩm</a>
+        </div>
 
     <table class="table table-striped">
         <thead>
@@ -72,13 +76,13 @@
                         @Html.DisplayFor(modelItem => item.Madm)
                     </td>
                     <td style="text-align: center">
-                        <a class="btn btn-sm btn-edit" asp-action="Edit" asp-route-id="@item.Masp">Sửa</a>
-                        <a class="btn btn-sm btn-delete" asp-action="Delete" asp-route-id="@item.Masp"> Xóa  </a>
+                            <a class="btn btn-sm btn-edit" asp-action="Suasanpham" asp-route-masp="@item.Masp">Sửa</a>
+                        <a class="btn btn-sm btn-delete" asp-action="Xoasanpham" asp-route-id="@item.Masp"> Xóa  </a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-</div>
+
 

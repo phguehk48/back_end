@@ -1,6 +1,7 @@
 ﻿using CHIC_CHARM2.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace CHIC_CHARM2.Areas.Admin.Controllers
 {
@@ -35,11 +36,13 @@ namespace CHIC_CHARM2.Areas.Admin.Controllers
         public IActionResult Themsanpham()
         {
             ViewBag.Madm = new SelectList(db.Danhmucsps.ToList(), "Madm", "Tendanhmuc");
+           
             return View();
         }
 
         [Route("Themsanpham")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Themsanpham(Sanpham Sanpham)
         {
 
@@ -50,7 +53,45 @@ namespace CHIC_CHARM2.Areas.Admin.Controllers
                 return RedirectToAction("Quanlysanpham");
 
             }
-            return View();
+            return View(Sanpham);
            }
-    }
+
+        [Route("Suasanpham")]
+        [HttpGet]
+        public IActionResult Suasanpham(string masp)
+        {
+            var Sanpham = db.Sanphams.Find(masp);
+            ViewBag.Madm = new SelectList(db.Danhmucsps.ToList(), "Madm", "Tendanhmuc");
+            return View(Sanpham);
+        }
+
+        [Route("Suasanpham")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Suasanpham(Sanpham Sanpham)
+        {
+
+            if (ModelState.IsValid)
+            {
+                db.Entry(Sanpham).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Quanlysanpham", "HomeAdmin");
+
+            }
+            return View(Sanpham);
+        }
+        [Route("Xoasanpham")]
+        [HttpGet]
+        public IActionResult Xoasanpham(string Masp)
+        {
+            {
+                var sanpham = db.Sanphams.Find(Masp);
+                db.Database.ExecuteSqlRaw("delete from Sanpham where Masp = '" + Masp + "'");
+               
+
+                return RedirectToAction("Quanlysanpham", "HomeAdmin");
+            }
+        }
+        }
+
 }

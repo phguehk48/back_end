@@ -11290,9 +11290,10 @@ code {
     margin-bottom: 0; }
 
 .page-title {
-  color: #343a40;
-  font-size: 1.125rem;
-  margin-bottom: 0; }
+    color: #343a40;
+    font-size: 1.125rem;
+    margin-bottom: 0;
+}
   .page-title .page-title-icon {
     display: inline-block;
     width: 36px;
@@ -14082,6 +14083,7 @@ dl {
 .btn-create-product {
     background-color: #ff2499b6;
     border: 1px solid #ff2499b6;
+    
 }
 
 .btn-edit {
@@ -14966,6 +14968,21 @@ dl {
 
 .delete-btn:hover {
     background-color: #f48fb1;
+}
+
+.action-container {
+    text-align: right; /* Căn nút về bên phải */
+    margin-top: 10px; /* Thêm khoảng cách phía trên */
+    margin-right: 20px; /* Thụt lùi một chút từ mép phải */
+}
+
+.btn-add-product {
+    background-color: #ff69b4; /* Màu hồng nhạt */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
