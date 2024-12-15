@@ -16,13 +16,13 @@
             </span>
             Quản lý sản phẩm
         </h1>
-   
-        </div>
 
-        <!-- Nút Thêm sản phẩm -->
-        <div class="action-container">
-            <a class="btn btn-succes btn-add-product" asp-action="Themsanpham">Thêm sản phẩm</a>
-        </div>
+    </div>
+
+    <!-- Nút Thêm sản phẩm -->
+    <div class="action-container">
+        <a class="btn btn-succes btn-add-product" asp-action="Themsanpham">Thêm sản phẩm</a>
+    </div>
 
     <table class="table table-striped">
         <thead>
@@ -76,13 +76,13 @@
                         @Html.DisplayFor(modelItem => item.Madm)
                     </td>
                     <td style="text-align: center">
-                            <a class="btn btn-sm btn-edit" asp-action="Suasanpham" asp-route-masp="@item.Masp">Sửa</a>
-                        <a class="btn btn-sm btn-delete" asp-action="Xoasanpham" asp-route-id="@item.Masp"> Xóa  </a>
+                        <a class="btn btn-sm btn-edit" asp-action="Suasanpham" asp-route-masp="@item.Masp">Sửa</a>
+                        <form asp-action="xoasp" asp-route-masp="@item.Masp" method="post">
+                            <button type="submit" class="btn btn-sm btn-delete">Xóa</button>
+                        </form>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-
-

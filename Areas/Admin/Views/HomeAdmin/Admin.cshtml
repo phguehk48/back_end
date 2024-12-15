@@ -12,16 +12,11 @@
             </span>
             Tổng quan
         </h3>
-        <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                 
-                    <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-                </li>
-            </ul>
-        </nav>
+
     </div>
+    <!-- Hàng đầu tiên: Các thẻ thống kê quản lý -->
     <div class="row">
+        <!-- Thẻ: Bán trong tuần -->
         <div class="col-md-4 stretch-card grid-margin">
             <div class="card bg-gradient-danger card-img-holder text-white">
                 <div class="card-body">
@@ -31,30 +26,34 @@
                 </div>
             </div>
         </div>
+        <!-- Thẻ: Đơn đặt hàng trong tuần -->
         <div class="col-md-4 stretch-card grid-margin">
             <div class="card bg-gradient-info card-img-holder text-white">
                 <div class="card-body">
                     <h4 class="font-weight-normal mb-3">
                         Đơn đặt hàng trong tuần
                     </h4>
-                    <h2 class="mb-5 card-price">45,6334</h2>
+                    <h2 class="mb-5 card-price">45,63</h2>
                     <h6 class="card-text">Giảm 10%</h6>
                 </div>
             </div>
         </div>
+        <!-- Thẻ: Khách truy cập trực tuyến -->
         <div class="col-md-4 stretch-card grid-margin">
             <div class="card bg-gradient-success card-img-holder text-white">
                 <div class="card-body">
                     <h4 class="font-weight-normal mb-3">
                         Khách truy cập trực tuyến
                     </h4>
-                    <h2 class="mb-5 card-price">95,5741</h2>
+                    <h2 class="mb-5 card-price">95,4</h2>
                     <h6 class="card-text">Tăng 5%</h6>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Hàng thứ hai: Biểu đồ và dữ liệu -->
     <div class="row">
+        <!-- Biểu đồ Sản phẩm bán chạy -->
         <div class="col-md-7 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -67,6 +66,7 @@
                 </div>
             </div>
         </div>
+        <!-- Biểu đồ Dữ liệu bán hàng -->
         <div class="col-md-5 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -78,68 +78,70 @@
             </div>
         </div>
     </div>
+    <!-- Hàng thứ ba: Bảng theo dõi đơn hàng -->
     <div class="row">
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Theo dõi đơn hàng</h4>
                     <div class="table-responsive">
-                        <table class="table">
-                            <thead>
+                        <table class="table table-striped">
+                            <thead class="table-header">
                                 <tr>
-                                    <th>Hình ảnh</th>
-                                    <th>Mô tả</th>
+                                    <th>STT</th>
+                                    <th>Khách hàng</th>
+                                    <th>Mã đơn hàng</th>
                                     <th>Trạng thái</th>
-                                    <th>Danh mục sản phẩm</th>
-                                    <th>Ngày</th>
-                                    <th>Mã hàng</th>
+                                    <th>Ngày tạo đơn</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                            <tbody class="table-content td">
+                                <tr style="text-align: center">
+                                    <td>1</td>
+                                    <td>cobexinhxan</td>
+                                    <td>DH01</td>
                                     <td>
-                                        <img src="assets/img/product1.1.png"
-                                             class="me-2"
-                                             alt="image" />
-                                        Alcoholicity
+                                        <label class="badge badge-gradient-success">Đã giao hàng</label>
                                     </td>
-                                    <td>Sản phẩm mô tả</td>
+                                    <td>12/11/2024</td>
+                                </tr>
+
+                                <tr style="text-align: center">
+                                    <td>2</td>
+                                    <td>hoangtumuadong</td>
+                                    <td>DH05</td>
+                                    <td>
+                                        <label class="badge badge-gradient-success">Đang giao hàng</label>
+                                    </td>
+                                    <td>29/11/2024</td>
+                                </tr>
+                                <tr style="text-align: center">
+                                    <td>3</td>
+                                    <td>hoangtumuadong</td>
+                                    <td>DH09</td>
+                                    <td>
+                                        <label class="badge badge-gradient-success">Đang giao hàng</label>
+                                    </td>
+                                    <td>30/11/2024</td>
+                                </tr>
+                                <tr style="text-align: center">
+                                    <td>4</td>
+                                    <td>linhchi1122</td>
+                                    <td>DH10</td>
+                                    <td>
+                                        <label class="badge badge-gradient-success">Đang giao hàng</label>
+                                    </td>
+                                    <td>30/11/2024</td>
+                                </tr>
+
+                                <tr style="text-align: center">
+                                    <td>5</td>
+                                    <td>anhtrang_muaha</td>
+                                    <td>DH12</td>
                                     <td>
                                         <label class="badge badge-gradient-success">Đang đóng gói</label>
                                     </td>
-                                    <td>Dec 5, 2017</td>
-                                    <td>WD-12345</td>
-                                    <td>SP03</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="assets/img/product1.2.png"
-                                             class="me-2"
-                                             alt="image" />
-                                        Bellini
-                                    </td>
-                                    <td>Sản phẩm mô tả</td>
-                                    <td>
-                                        <label class="badge badge-gradient-warning">Đang chờ xác nhận</label>
-                                    </td>
-                                    <td>Dec 12, 2017</td>
-                                    <td>WD-12346</td>
-                                    <td>SP01</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="assets/img/product10.1.png"
-                                             class="me-2"
-                                             alt="image" />
-                                        Martini
-                                    </td>
-                                    <td>Sản phẩm mô tả</td>
-                                    <td>
-                                        <label class="badge badge-gradient-info">Đang giao hàng</label>
-                                    </td>
-                                    <td>Dec 16, 2017</td>
-                                    <td>WD-12347</td>
-                                    <td>SP02</td>
+                                    <td>02/12/2024</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -149,6 +151,3 @@
         </div>
     </div>
 </div>
-
-
-

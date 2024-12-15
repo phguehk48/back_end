@@ -610,7 +610,15 @@ body {
     transform: scale(1) rotate(0deg);
   }
 }
-
+.message-error {
+    color: red; /* Màu chữ đỏ */
+    text-align: center; /* Căn giữa */
+    background-color: #ffe6e6; /* Nền hồng nhạt */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    border: 1px solid #ffcccc; /* Đường viền hồng nhạt */
+    border-radius: 5px; /* Bo góc */
+    font-weight: bold; /* Chữ in đậm */
+}
 /* Áp dụng hiệu ứng lấp lánh với gradient cho span trong title */
 .home__title span {
   font-size: 40px;

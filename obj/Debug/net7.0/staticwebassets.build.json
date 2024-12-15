@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p1YmmMcM6gvix/84bUQ8F60TyFkk/ovseffHBzxMtnA=",
+  "Hash": "EdqjNhwqa8ik+TB48LJt5zqBd5VVFpq5tkTfHbzduaE=",
   "Source": "CHIC_CHARM2",
   "BasePath": "_content/CHIC_CHARM2",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img\\alcoholicity.jpg"
     },
     {
+      "Identity": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\Assets\\img\\anh1.png",
+      "SourceId": "CHIC_CHARM2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\",
+      "BasePath": "_content/CHIC_CHARM2",
+      "RelativePath": "Assets/img/anh1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\img\\anh1.png"
+    },
+    {
       "Identity": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\Assets\\img\\banner.png",
       "SourceId": "CHIC_CHARM2",
       "SourceType": "Discovered",
@@ -236,6 +253,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\img\\blackfriday.png"
+    },
+    {
+      "Identity": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\Assets\\img\\boy3.png",
+      "SourceId": "CHIC_CHARM2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\",
+      "BasePath": "_content/CHIC_CHARM2",
+      "RelativePath": "Assets/img/boy3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\img\\boy3.png"
+    },
+    {
+      "Identity": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\Assets\\img\\cogai2.png",
+      "SourceId": "CHIC_CHARM2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\",
+      "BasePath": "_content/CHIC_CHARM2",
+      "RelativePath": "Assets/img/cogai2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\img\\cogai2.png"
     },
     {
       "Identity": "C:\\Users\\MYPC\\Downloads\\nhom6_updated\\CHIC_CHARM2\\wwwroot\\Assets\\img\\countdown.png",

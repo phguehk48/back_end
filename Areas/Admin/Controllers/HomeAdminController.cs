@@ -31,12 +31,12 @@ namespace CHIC_CHARM2.Areas.Admin.Controllers
             return View(lstSanpham);
         }
 
-        [Route ("Themsanpham")]
+        [Route("Themsanpham")]
         [HttpGet]
         public IActionResult Themsanpham()
         {
             ViewBag.Madm = new SelectList(db.Danhmucsps.ToList(), "Madm", "Tendanhmuc");
-           
+
             return View();
         }
 
@@ -46,15 +46,15 @@ namespace CHIC_CHARM2.Areas.Admin.Controllers
         public IActionResult Themsanpham(Sanpham Sanpham)
         {
 
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 db.Sanphams.Add(Sanpham);
-                    db.SaveChanges();
+                db.SaveChanges();
                 return RedirectToAction("Quanlysanpham");
 
             }
             return View(Sanpham);
-           }
+        }
 
         [Route("Suasanpham")]
         [HttpGet]
@@ -80,18 +80,47 @@ namespace CHIC_CHARM2.Areas.Admin.Controllers
             }
             return View(Sanpham);
         }
-        [Route("Xoasanpham")]
-        [HttpGet]
-        public IActionResult Xoasanpham(string Masp)
+        [Route("xoasanpham")]
+        [HttpPost]
+        public IActionResult xoasp(string masp)
         {
-            {
-                var sanpham = db.Sanphams.Find(Masp);
-                db.Database.ExecuteSqlRaw("delete from Sanpham where Masp = '" + Masp + "'");
-               
+            db.Database.ExecuteSqlRaw("delete from Sanpham where Masp = '" + masp + "'");
+            return RedirectToAction("Quanlysanpham");
+        }
+        [Route("Login")]
+        [HttpGet]
+        public IActionResult AdminLogin()
+        {
+            TempData["Message"] = "";
+            return View("~/Areas/Admin/Views/HomeAdmin/Login.cshtml");
+        }
+        [Route("Login")]
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
 
-                return RedirectToAction("Quanlysanpham", "HomeAdmin");
+            var account = db.Nguoidungs.SingleOrDefault(x => x.Tendangnhap == username && x.Matkhau == password);
+
+            if (account != null)
+            {
+                if (account.Loainguoidung == "Admin")
+                {
+
+                    return RedirectToAction("Admin");
+                }
+                else if (account.Loainguoidung == "Khách hàng")
+                {
+                    TempData["Message"] = "Không phải là quản trị viên";
+                }
+
             }
+            else
+            {
+                TempData["Message"] = "Tên đăng nhập hoặc mật khẩu không đúng";
+            }
+
+            return View("~/Areas/Admin/Views/HomeAdmin/Login.cshtml");
         }
-        }
+    }
 
 }
